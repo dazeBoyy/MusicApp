@@ -1,0 +1,33 @@
+# Android Studio
+.idea/
+.gradle/
+local.properties
+build/
+
+# Gradle
+*.gradle
+.gradle/
+
+# Keystore files
+*.jks
+*.keystore
+
+# User-specific files
+*.iml
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Logs
+*.log
+
+# Gradle Wrapper
+gradle-wrapper.jar
+
+# Android-specific
+/captures/
+/outputs/
+/dependencies/

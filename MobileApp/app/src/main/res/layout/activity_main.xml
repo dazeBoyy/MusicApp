@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/favorite"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            android:layout_marginTop="80dp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"> <!-- Initially hidden -->
+
+            <fragment
+                android:id="@+id/fragment_favorite_tracks"
+                android:name="com.app.musicapp.FavoriteTracks"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:layout="@layout/fragment_favorite_tracks" />
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!-- Основной контент -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/imageView53"
+                android:layout_width="32dp"
+                android:layout_height="34dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="584dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/vector" />
+
+
+            <ImageView
+                android:id="@+id/imageView51"
+                android:layout_width="55dp"
+                android:layout_height="37dp"
+                android:layout_marginEnd="340dp"
+                android:layout_marginBottom="664dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/vector" />
+
+
+            <ImageView
+                android:id="@+id/sign_out_button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/signout" />
+
+            <!-- Логотип -->
+            <ImageView
+                android:id="@+id/logoImage"
+                android:layout_width="200dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/logoremovebg" />
+
+            <!-- Заголовок -->
+            <TextView
+                android:id="@+id/tv_home_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Найти трек"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#000"
+                app:layout_constraintTop_toBottomOf="@id/logoImage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Поле для ввода артиста -->
+            <EditText
+                android:id="@+id/et_artist"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/input_field"
+                android:hint="Введите имя артиста"
+                android:padding="12dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+
+            <!-- Поле для ввода трека -->
+            <EditText
+                android:id="@+id/et_track"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/input_field"
+                android:hint="Введите название трека"
+                android:padding="12dp"
+                app:layout_constraintTop_toBottomOf="@id/et_artist"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <Switch
+                android:id="@+id/similar_tracks_switch"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+
+                app:layout_constraintTop_toBottomOf="@id/et_track"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="16dp" />
+
+
+            <TextView
+                android:id="@+id/tv_switch_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="30dp"
+                android:text="Искать похожие треки"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/et_track"
+                app:layout_constraintStart_toEndOf="@id/similar_tracks_switch" />
+
+            <Button
+                android:id="@+id/btn_search"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#F8C272"
+                android:text="Найти"
+                android:textColor="#FFF"
+                app:layout_constraintTop_toBottomOf="@id/similar_tracks_switch"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_search_results"
+                android:layout_width="365dp"
+                android:layout_height="296dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.571"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_search"
+                app:layout_constraintVertical_bias="0.009" />
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="92dp"
+                android:visibility="gone"
+                android:layout_marginEnd="176dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_search" />
+
+
+            <fragment
+                android:id="@+id/fragment_bottom_nav_bar"
+                android:name="com.app.musicapp.BottomNavBarFragment"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="680dp"
+                tools:layout="@layout/fragment_bottom_nav_bar" />
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!-- BottomSheet -->
+
+
+    <!-- BottomSheet -->
+    <FrameLayout
+        android:id="@+id/bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="90dp"
+        android:visibility="invisible"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"> <!-- Высота BottomNavBar -->
+        <!-- Содержимое BottomSheet -->
+        <fragment
+            android:id="@+id/mini_player"
+            android:name="com.app.musicapp.MiniPlayerFragment"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+
+            app:layout_constraintBottom_toTopOf="@id/fragment_bottom_nav_bar"
+            tools:layout="@layout/mini_player" />
+    </FrameLayout>
+
+
+
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
