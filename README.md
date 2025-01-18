@@ -65,8 +65,8 @@ MusicApp — это приложение для поиска и скачиван
 ### Настройка Firebase
 
 1. Создайте проект в [Firebase Console](https://console.firebase.google.com/).
-2. Загрузите файл `google-services.json` и поместите его в папку `app/` вашего Android проекта.
-3. Добавьте SHA-1 вашего приложения в настройки Firebase:
+2. Добавьте SHA-1 вашего приложения в настройки Firebase
+3.  Загрузите файл `google-services.json` и поместите его в папку `app/` вашего Android проекта.:
  - В Android Studio откройте терминал и выполните команду для получения SHA-1:
    ```bash
    ./gradlew signingReport
@@ -80,12 +80,9 @@ MusicApp — это приложение для поиска и скачиван
    ```
 
 ## Мобильное приложение демонстрация работы:
-
-![image](https://github.com/user-attachments/assets/732c0d6d-c2cf-4016-9683-8ce51464d521)
-![image](https://github.com/user-attachments/assets/9b298289-2264-4d9b-b83a-58bc2792d5b9)
-![image](https://github.com/user-attachments/assets/5669d8f7-30ec-4ec9-820a-308f54d3e01a)
-![image](https://github.com/user-attachments/assets/19a3e33d-eb86-429c-9363-b9e35677db61)
-![image](https://github.com/user-attachments/assets/75f740e3-cfb2-4430-ad0b-eca762655ed1)
-![image](https://github.com/user-attachments/assets/4cfcf41f-ede3-4fa0-b75d-841e32c4dcab)
-![image](https://github.com/user-attachments/assets/cc39ce15-4c2b-4e1c-a1bd-ee6ea89a3b09)
-![image](https://github.com/user-attachments/assets/85253b9b-732d-4c11-a870-b6854c6d8ac1)
+![image](https://github.com/user-attachments/assets/ad7f2a0f-1855-47db-828b-2f67bc3d5bdb)
+![image](https://github.com/user-attachments/assets/1e8d9daf-e5e8-4876-9e54-7430866843e3)
+![image](https://github.com/user-attachments/assets/3fe38ae9-f8ad-4266-b3f1-60f049f90fb4)
+![image](https://github.com/user-attachments/assets/b251e1cb-5169-416e-84a7-e456eb69b9cf)
+![image](https://github.com/user-attachments/assets/2c328b45-44a3-4903-9ea3-39257c1fd9b8)
+![image](https://github.com/user-attachments/assets/009dce56-ae64-48b8-868a-6920f9dd54c9)
