@@ -75,8 +75,20 @@ MusicApp — это приложение для поиска и скачиван
  -  
   4. Убедитесь, что в вашем `build.gradle` (модуль `app`) включены зависимости для Firebase:
    ```gradle
-   implementation 'com.google.firebase:firebase-auth:21.0.1'
-   implementation 'com.google.firebase:firebase-firestore:24.0.2'
+  implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
+    implementation("androidx.navigation:navigation-fragment:2.7.7")
+    implementation("androidx.navigation:navigation-ui:2.7.7")
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation ("com.github.bumptech.glide:glide:4.11.0")
+    implementation("com.google.firebase:firebase-database:21.0.0")
+    annotationProcessor ("com.github.bumptech.glide:compiler:4.11.0")
+    implementation ("com.google.android.gms:play-services-auth:20.7.0")
+    implementation("com.google.firebase:firebase-auth:23.1.0")
+    implementation(platform("com.google.firebase:firebase-bom:33.7.0"))
+    implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.android.gms:play-services-auth:21.3.0")
    ```
 
 ## Мобильное приложение демонстрация работы:
